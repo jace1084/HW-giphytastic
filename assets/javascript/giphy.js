@@ -6,5 +6,18 @@ $(document).ready(function(){
 
 	//Now, create a function that will display the gif buttons...loop throught the array
 
+	function disButtons(){
+		$("#buttonsView").empty();
+		for(var i=0; i<char.length; i++){
+			var gifButton = $("<button>");
+			var gifButton.addClass("fav");
+			var gifButton.addClass("btn btn-primary");
+			gifButton.attr("data-name", char[i]);
+			gifButton.text(char[i]);
+			$("#buttonsView").append(gifButton);
+		}
+	}
+
+	//Next, create a function that will display the gif buttons
 	
 })
