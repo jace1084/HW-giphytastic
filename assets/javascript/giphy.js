@@ -84,7 +84,7 @@ $( document ).ready(function() {
 				gifImg.addClass("image");
 				gifDiv.append(gifImg);
 				//Next, I will add a new div to the existing divs
-				$("gifsView").prepend(gifDiv);
+				$("#gifsView").prepend(gifDiv);
 
 			}
 
