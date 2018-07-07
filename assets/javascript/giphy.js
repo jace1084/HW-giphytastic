@@ -55,9 +55,10 @@ $( document ).ready(function() {
 			url: queryURL,
 			method: "GET"
 		}).done(function(res){
-			$("#gifsView").text(JSON.stringify(res));
-			var results = res.data;
-			if(res == ""){
+			console.log(response); // console test to make sure something returns
+			$("#gifsView").empty(); // erasing anything in this div id so that it doesnt keep any from the previous click
+			var results = response.data; //shows results of gifs
+			if (results == ""){
 				alert("Aww, I don't have a Giphy for that one, try again!!");
 
 			}
