@@ -73,7 +73,7 @@ $( document ).ready(function() {
 
 		//This will now pull the Gif from the site.
 
-				var gifImg = $("#<img>");
+				var gifImg = $("<img>");
 				gifImg.attr("src", results[i].images.fixed_height_small_still.url);
 				//This is for paused imgs 
 				gifImg.attr("data-still", results[i].images.fixed_height_small_still.url);
