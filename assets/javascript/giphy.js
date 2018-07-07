@@ -23,10 +23,8 @@ $( document ).ready(function() {
 	function newButton(){
 		$("#addGif").on("click", function(){
 			var char = $("#subjInput").val().trim();
-			
 			if (char == ""){
-				return false; //This will stop blank buttons from being created
-				
+				return false; //This will stop blank buttons from being created	
 			}
 
 			subj.push(char);
@@ -51,17 +49,17 @@ $( document ).ready(function() {
 	// This will show the results of the gifs
 
 	function displayGifs() {
-		var star_wars = $(this).attr("data-name");
-		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + star_wars + "&api_key=QFIiD3HZspx02x93i3uxFzMlF0dTiA8N&limit=10"
+		var starwars = $(this).attr("data-name");
+		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + starwars + "&api_key=QFIiD3HZspx02x93i3uxFzMlF0dTiA8N&limit=10";
 		console.log(queryURL); // displays the constructed url
 
 		$.ajax({
 			url: queryURL,
 			method: "GET"
 		}).done(function(res){
-			console.log(response); // console test to make sure something returns
+			console.log(res); // console test to make sure something returns
 			$("#gifsView").empty(); // erasing anything in this div id so that it doesnt keep any from the previous click
-			var results = response.data; //shows results of gifs
+			var results = res.data; //shows results of gifs
 			if (results == ""){
 				alert("Aww, I don't have a Giphy for that one, try again!!");
 
