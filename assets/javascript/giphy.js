@@ -23,16 +23,20 @@ $( document ).ready(function() {
 	function newButton(){
 		$("#addGif").on("click", function(){
 			var char = $("#subjInput").val().trim();
+			
 			if (char == ""){
 				return false; //This will stop blank buttons from being created
+				
 			}
 
 			subj.push(char);
 
 			disButtons();
 			return false;
+			
 
 		});
+		$('subjInput').val('');
 	}
 
 	//Now, create a function to remove the last button.
