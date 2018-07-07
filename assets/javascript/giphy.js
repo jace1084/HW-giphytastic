@@ -10,15 +10,15 @@ $( document ).ready(function() {
 		$("#buttonsView").empty();
 		for(var i=0; i<subj.length; i++){
 			var gifButton = $("<button>");
-			var gifButton.addClass("fav");
-			var gifButton.addClass("btn btn-primary");
+			gifButton.addClass("fav");
+			gifButton.addClass("btn btn-primary");
 			gifButton.attr("data-name", subj[i]);
 			gifButton.text(subj[i]);
 			$("#buttonsView").append(gifButton);
 		}
 	}
 
-	//Next, create a function that will display the gif buttons
+	// Next, create a function that will display the gif buttons
 
 	function newButton(){
 		$("#addGif").on("click", function(){
@@ -46,7 +46,7 @@ $( document ).ready(function() {
 		});
 
 		// This will show the results of the gifs
-		.done(function(res){
+		done(function(res){
 			$("#gifsView").empty();
 			var results = res.data;
 			if(res == ""){
