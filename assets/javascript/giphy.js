@@ -37,17 +37,24 @@ $( document ).ready(function() {
 
 	//Now, create a function to remove the last button.
 	function removeButton(){
+		$("removeGif").on("click", function() {
+			subj.pop(char);
+			displayButtons();
+			return false;
+		});
+	
+	}
+	// This will show the results of the gifs
+
+	function displayGifs() {
 		var char = $(this).attr("data-name");
 		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + char + "&api_key=QFIiD3HZspx02x93i3uxFzMlF0dTiA8N"
 
 		$.ajax({
 			url: queryURL,
 			method: "GET"
-		});
-
-		// This will show the results of the gifs
-		done(function(res){
-			$("#gifsView").empty();
+		}).then(function(res){
+			$("#gifsView").text(JSON.stringify(res));
 			var results = res.data;
 			if(res == ""){
 				alert("Aww, I don't have a Giphy for that one, try again!!");
