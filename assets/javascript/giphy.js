@@ -48,12 +48,13 @@ $( document ).ready(function() {
 
 	function displayGifs() {
 		var char = $(this).attr("data-name");
-		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + char + "&api_key=QFIiD3HZspx02x93i3uxFzMlF0dTiA8N"
+		var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + char + "&api_key=QFIiD3HZspx02x93i3uxFzMlF0dTiA8N&limit=10"
+		console.log(queryURL); // displays the constructed url
 
 		$.ajax({
 			url: queryURL,
 			method: "GET"
-		}).then(function(res){
+		}).done(function(res){
 			$("#gifsView").text(JSON.stringify(res));
 			var results = res.data;
 			if(res == ""){
