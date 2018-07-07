@@ -31,8 +31,6 @@ $( document ).ready(function() {
 
 			disButtons();
 			return false;
-			
-
 		});
 		$('subjInput').val('');
 	}
@@ -56,7 +54,8 @@ $( document ).ready(function() {
 		$.ajax({
 			url: queryURL,
 			method: "GET"
-		}).done(function(res){
+		})
+		.done(function(res){
 			console.log(res); // console test to make sure something returns
 			$("#gifsView").empty(); // erasing anything in this div id so that it doesnt keep any from the previous click
 			var results = res.data; //shows results of gifs
@@ -68,6 +67,7 @@ $( document ).ready(function() {
 				//This will put the gifs in the specified div
 				var gifDiv = $("<div>");
 				//This is going to add the rating of the gif
+				gifDiv.addClass("gifDiv");
 				var gifRating = $("<p>").text("Rating " + results[i].rating);
 				gifDiv.append(gifRating);
 
