@@ -16,7 +16,6 @@ p {
 	font-size: 16px;
 }
 .btn {
-    /* adding spacing between each button*/
     margin: 10px;
 	opacity: .8;
 	background-color: black;
@@ -28,7 +27,6 @@ label {
 	margin-right: 10px;
 }
 .gifDiv{
-    /* making the images go in one line rather than block & adding spacing between the images*/
     float: left;
     margin: 3px;
 }
@@ -54,6 +52,7 @@ audio {
 }
 div#footer {
 	background-color: transparent;
+	color: red;
 	clear: both;
 	margin-top: 40px;
 	position: center;
