@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+	document.getElementById('assets/star-wars-theme.mp3').play();
 
 	//first, create my original array that will (hopefully) be updated with the users choices.
 
