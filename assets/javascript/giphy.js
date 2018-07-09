@@ -1,6 +1,4 @@
 $( document ).ready(function() {
-	document.getElementById('assets/star-wars-theme.mp3').play();
-
 	//first, create my original array that will (hopefully) be updated with the users choices.
 
 	var subj = ["Princess Leia", "Luke Skywalker", "Anakin Skywalker", "Yoda", "R2-D2", "C-3PO", "Han Solo", "Chewbacca"];
